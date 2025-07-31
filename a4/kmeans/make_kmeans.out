@@ -1,0 +1,2 @@
+mpicc -Wall -Wextra -Wno-unused -O3 -c kmeans.c -o kmeans.o
+mpicc -Wall -Wextra -Wno-unused -O3 main.o file_io.o kmeans.o util.o -o kmeans_mpi 

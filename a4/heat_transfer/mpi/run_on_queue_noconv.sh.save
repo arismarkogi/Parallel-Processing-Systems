@@ -1,0 +1,55 @@
+#!/bin/bash
+
+ARRAY_SIZES=(2048 4096 6144) # Different matrix sizes to test
+PROCESS_COUNTS=(1 2 4 8 16 32 64) # Different process counts to test
+EXECUTABLES=(jacobi_noconv seidelsor_noconv rebblacksor_noconv) # Executable files to run
+
+ITERATIONS=256
+
+# Function to calculate process grid dimensions
+calculate_grid() {
+    local total_procs=$1
+    local px=$(awk "BEGIN {print int(sqrt($total_procs))}")
+    while (( total_procs % px != 0 )); do
+        ((px /= 2))
+    done
+    local py=$((total_procs / px))
+    echo "$px $py"
+}
+
+# Load MPI module
+module load openmpi/1.8.3
+
+# Change directory to the appropriate working path
+cd /home/parallel/parlab20/a4/heat_transfer/mpi
+
+# Loop over different matrix sizes
+for ARRAY_SIZE in "${ARRAY_SIZES[@]}"; do
+    for p in "${PROCESS_COUNTS[@]}"; do
+        nodes=$(( ($p + 7) / 8 )) # Calculate required nodes (assuming 8 processes per node)
+        read px py <<< $(calculate_grid $p) # Compute grid dimensions
+        
+        # Loop over each executable
+        for exec in "${EXECUTABLES[@]}"; do
+            script_name="run_${exec}_${ARRAY_SIZE}.pbs"
+            
+            # Create PBS script for the given executable and process count
+            cat << EOF > $script_name
+#!/bin/bash
+#PBS -N run_${exec}_${ARRAY_SIZE}_${p}
+#PBS -o /home/parallel/parlab20/a4/heat_transfer/mpi/results/${exec}_results_${ARRAY_SIZE}_${p}.out
+#PBS -e /home/parallel/parlab20/a4/heat_transfer/mpi/errors/${exec}_error_${ARRAY_SIZE}_${p}.err
+#PBS -l nodes=${nodes}:ppn=8
+
+module load openmpi/1.8.3
+cd /home/parallel/parlab20/a4/heat_transfer/mpi
+
+mpirun --mca btl tcp,self -np $p ./${exec} $ARRAY_SIZE $ARRAY_SIZE $px $py  > results/${exec}_result_${ARRAY_SIZE}_${p}.txt
+EOF
+            
+            # Submit the job
+            qsub $script_name
+        done
+    done
+don
+

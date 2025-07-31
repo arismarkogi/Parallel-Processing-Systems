@@ -1,0 +1,5 @@
+GameOfLife: Size 1024 Steps 1000 Time 11.354438
+GameOfLife: Size 1024 Steps 1000 Time 26.155055
+GameOfLife: Size 1024 Steps 1000 Time 51.094925
+GameOfLife: Size 1024 Steps 1000 Time 62.957214
+GameOfLife: Size 1024 Steps 1000 Time 109.668077

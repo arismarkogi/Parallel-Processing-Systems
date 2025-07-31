@@ -1,0 +1,4 @@
+gcc -Wall -O3 -Wno-unused-variable -fopenmp -c util.c -o util.o
+gcc util.o fw.c -o fw -Wall -O3 -Wno-unused-variable -fopenmp
+gcc util.o fw_sr_aris.c -o fw_sr_aris -Wall -O3 -Wno-unused-variable -fopenmp
+gcc util.o fw_tiled_aris.c -o fw_tiled_aris -Wall -O3 -Wno-unused-variable -fopenmp

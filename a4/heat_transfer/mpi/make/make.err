@@ -1,0 +1,27 @@
+mpi_jacobi.c: In function 'main':
+mpi_jacobi.c:16:12: warning: unused variable 'omega' [-Wunused-variable]
+     double omega;    //relaxation factor - useless for Jacobi
+            ^
+mpi_jacobi.c:339:5: warning: 'scattercounts' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     MPI_Gatherv(&u_current[1][1], 1, local_block, &U[0][0], scattercounts, scatteroffset, global_block, 0, MPI_COMM_WORLD);
+     ^
+mpi_jacobi.c:339:5: warning: 'scatteroffset' may be used uninitialized in this function [-Wmaybe-uninitialized]
+mpi_jacobi.c:140:9: warning: 'U' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         free2d(U);
+         ^
+mpi_gauss_seidel_sor.c: In function 'main':
+mpi_gauss_seidel_sor.c:346:5: warning: 'scattercounts' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     MPI_Gatherv(&u_current[1][1], 1, local_block, &U[0][0], scattercounts, scatteroffset, global_block, 0, MPI_COMM_WORLD);
+     ^
+mpi_gauss_seidel_sor.c:346:5: warning: 'scatteroffset' may be used uninitialized in this function [-Wmaybe-uninitialized]
+mpi_gauss_seidel_sor.c:143:9: warning: 'U' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         free2d(U);
+         ^
+mpi_red_black_sor.c: In function 'main':
+mpi_red_black_sor.c:375:5: warning: 'scattercounts' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     MPI_Gatherv(&u_current[1][1], 1, local_block, &U[0][0], scattercounts, scatteroffset, global_block, 0, MPI_COMM_WORLD);
+     ^
+mpi_red_black_sor.c:375:5: warning: 'scatteroffset' may be used uninitialized in this function [-Wmaybe-uninitialized]
+mpi_red_black_sor.c:143:9: warning: 'U' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         free2d(U);
+         ^

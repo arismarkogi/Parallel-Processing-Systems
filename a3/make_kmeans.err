@@ -1,0 +1,99 @@
+cuda_kmeans_naive.cu(36): warning #177-D: variable "i" was declared but never referenced
+    int i;
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+cuda_kmeans_naive.cu(115): warning #177-D: variable "loop_iterations" was declared but never referenced
+    int loop_iterations = 0;
+        ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z20find_nearest_clusteriiiPdS_PiS_' for 'sm_60'
+ptxas info    : Function properties for _Z20find_nearest_clusteriiiPdS_PiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 368 bytes cmem[0]
+cuda_kmeans_transpose.cu(36): warning #177-D: variable "i" was declared but never referenced
+    int i;
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+cuda_kmeans_transpose.cu(119): warning #177-D: variable "loop_iterations" was declared but never referenced
+    int loop_iterations = 0;
+        ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z20find_nearest_clusteriiiPdS_PiS_' for 'sm_60'
+ptxas info    : Function properties for _Z20find_nearest_clusteriiiPdS_PiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 368 bytes cmem[0]
+cuda_kmeans_shared.cu(36): warning #177-D: variable "i" was declared but never referenced
+    int i;
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+cuda_kmeans_shared.cu(126): warning #177-D: variable "loop_iterations" was declared but never referenced
+    int loop_iterations = 0;
+        ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z20find_nearest_clusteriiiPdS_PiS_' for 'sm_60'
+ptxas info    : Function properties for _Z20find_nearest_clusteriiiPdS_PiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 368 bytes cmem[0]
+cuda_kmeans_all_gpu.cu(36): warning #177-D: variable "i" was declared but never referenced
+    int i;
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+cuda_kmeans_all_gpu.cu(132): warning #177-D: variable "coordId" was declared but never referenced
+        int coordId = i / numClusters;
+            ^
+
+cuda_kmeans_all_gpu.cu(175): warning #177-D: variable "loop_iterations" was declared but never referenced
+    int loop_iterations = 0;
+        ^
+
+cuda_kmeans_all_gpu.cu(176): warning #177-D: variable "index" was declared but never referenced
+    int i, j, index, loop = 0;
+              ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z16update_centroidsiiPiPdS0_' for 'sm_60'
+ptxas info    : Function properties for _Z16update_centroidsiiPiPdS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 352 bytes cmem[0], 32 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z20find_nearest_clusteriiiPdPiS_S_S0_S_' for 'sm_60'
+ptxas info    : Function properties for _Z20find_nearest_clusteriiiPdPiS_S_S0_S_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 384 bytes cmem[0]
+cuda_kmeans_all_gpu_delta_reduction.cu(36): warning #177-D: variable "i" was declared but never referenced
+    int i;
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+cuda_kmeans_all_gpu_delta_reduction.cu(160): warning #177-D: variable "coordId" was declared but never referenced
+        int coordId = i / numClusters;
+            ^
+
+cuda_kmeans_all_gpu_delta_reduction.cu(201): warning #177-D: variable "loop_iterations" was declared but never referenced
+    int loop_iterations = 0;
+        ^
+
+cuda_kmeans_all_gpu_delta_reduction.cu(202): warning #177-D: variable "index" was declared but never referenced
+    int i, j, index, loop = 0;
+              ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z16update_centroidsiiPiPdS0_' for 'sm_60'
+ptxas info    : Function properties for _Z16update_centroidsiiPiPdS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 352 bytes cmem[0], 32 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z20find_nearest_clusteriiiPdPiS_S_S0_S_' for 'sm_60'
+ptxas info    : Function properties for _Z20find_nearest_clusteriiiPdPiS_S_S0_S_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 384 bytes cmem[0]

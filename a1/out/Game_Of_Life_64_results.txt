@@ -1,0 +1,5 @@
+GameOfLife: Size 64 Steps 1000 Time 0.029398
+GameOfLife: Size 64 Steps 1000 Time 0.070876
+GameOfLife: Size 64 Steps 1000 Time 0.167375
+GameOfLife: Size 64 Steps 1000 Time 0.216942
+GameOfLife: Size 64 Steps 1000 Time 0.335847

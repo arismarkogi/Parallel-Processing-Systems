@@ -1,0 +1,21 @@
+Running with 1 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total = 11.0367s)  (per loop =  1.1037s)
+Running with 2 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total =  5.5186s)  (per loop =  0.5519s)
+Running with 4 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total =  2.7653s)  (per loop =  0.2765s)
+Running with 8 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total =  1.3907s)  (per loop =  0.1391s)
+Running with 16 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total =  0.7316s)  (per loop =  0.0732s)
+Running with 32 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total =  0.3682s)  (per loop =  0.0368s)
+Running with 64 processes
+dataset_size = 256.00 MB    numObjs = 1048576    numCoords = 32    numClusters = 16
+        nloops =  10   (total =  0.2019s)  (per loop =  0.0202s)
